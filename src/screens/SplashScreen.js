@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { StackActions } from '@react-navigation/native';
 
-class Home extends Component {
+class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -10,7 +10,7 @@ class Home extends Component {
 
     componentDidMount() {
         setTimeout(() => {
-            this.props.navigation.dispatch(StackActions.replace('Home'))
+            this.props.navigation.dispatch(StackActions.replace('Login'))
         }, 3000)
     }
 
@@ -23,4 +23,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default Login;

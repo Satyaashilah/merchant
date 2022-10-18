@@ -1,4 +1,5 @@
-// import Fitur from './fitur';
+import Fitur from './fitur';
+import BottomNav from './bottomNav';
 
-
-// export { Fitur }
+export { Fitur };
+export { BottomNavp };
