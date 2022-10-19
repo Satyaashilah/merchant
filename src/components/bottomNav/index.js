@@ -3,7 +3,7 @@ import React from 'react'
 
 const index = () => {
     return (
-        <View style={style.kotak}>
+        <View style={styles.kotak}>
             <View style={{ flexDirection: 'row' }}>
                 <Text>Pesanan</Text>
             </View>

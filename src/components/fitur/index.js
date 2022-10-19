@@ -1,52 +1,52 @@
 import { StyleSheet, Text, TouchableOpacity, Image, View } from 'react-native'
 import React from 'react'
 
-const Fitur = () => {
+const index = () => {
     return (
         <View style={{ flexDirection: 'column' }}>
             <View style={{ flexDirection: 'row' }}>
                 <TouchableOpacity>
-                    <View style={style.kotak3}>
+                    <View style={styles.kotak3}>
                         <View>
-                            <Image source={require('./assets/images/order.png')}
-                                style={style.fiturHome}
+                            <Image source={require('./../../assets/images/order.png')}
+                                style={styles.fiturHome}
                                 resizeMode="cover" />
                         </View>
                     </View>
-                    <Text style={style.fiturHomeTxt}>Pesanan</Text>
+                    <Text style={styles.fiturHomeTxt}>Pesanan</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity>
-                    <View style={style.kotak3}>
+                    <View style={styles.kotak3}>
                         <View>
-                            <Image source={require('../assets/images/menu.png')}
-                                style={style.fiturHome}
+                            <Image source={require('./../../assets/images/menu.png')}
+                                style={styles.fiturHome}
                                 resizeMode="cover" />
                         </View>
                     </View>
-                    <Text style={style.fiturHomeTxt}>Menu</Text>
+                    <Text style={styles.fiturHomeTxt}>Menu</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity>
-                    <View style={style.kotak3}>
+                    <View style={styles.kotak3}>
                         <View>
-                            <Image source={require('../assets/images/groceries.png')}
-                                style={style.fiturHome}
+                            <Image source={require('./../../assets/images/groceries.png')}
+                                style={styles.fiturHome}
                                 resizeMode="cover" />
                         </View>
                     </View>
-                    <Text style={style.fiturHomeTxt}>Grosir</Text>
+                    <Text style={styles.fiturHomeTxt}>Grosir</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity>
-                    <View style={style.kotak3}>
+                    <View style={styles.kotak3}>
                         <View>
-                            <Image source={require('../assets/images/coupon.png')}
-                                style={style.fiturHome}
+                            <Image source={require('./../../assets/images/coupon.png')}
+                                style={styles.fiturHome}
                                 resizeMode="cover" />
                         </View>
                     </View>
-                    <Text style={style.fiturHomeTxt}>Diskon</Text>
+                    <Text style={styles.fiturHomeTxt}>Diskon</Text>
                 </TouchableOpacity>
 
             </View>
@@ -54,34 +54,35 @@ const Fitur = () => {
 
             <View style={{ flexDirection: 'row' }}>
                 <TouchableOpacity>
-                    <View style={style.kotak3}>
+                    <View style={styles.kotak3}>
                         <View>
-                            <Image source={require('../assets/images/finance.png')}
-                                style={style.fiturHome}
+                            <Image source={require('./../../assets/images/finance.png')}
+                                style={styles.fiturHome}
                                 resizeMode="cover" />
                         </View>
                     </View>
-                    <Text style={style.fiturHomeTxt}>Keuangan</Text>
+                    <Text style={styles.fiturHomeTxt}>Keuangan</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity>
-                    <View style={style.kotak3}>
+                    <View style={styles.kotak3}>
                         <View>
-                            <Image source={require('../assets/images/group.png')}
-                                style={style.fiturHome}
+                            <Image source={require('./../../assets/images/group.png')}
+                                style={styles.fiturHome}
                                 resizeMode="cover" />
                         </View>
                     </View>
-                    <Text style={style.fiturHomeTxt}>Karyawan</Text>
+                    <Text style={styles.fiturHomeTxt}>Karyawan</Text>
                 </TouchableOpacity>
             </View>
         </View>
-    )
+    );
 }
 
-export default Fitur;
 
-const style = StyleSheet.create({
+export default index;
+
+const styles = StyleSheet.create({
     kotak3: {
         marginHorizontal: '5.5%',
         height: 60,

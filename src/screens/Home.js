@@ -1,18 +1,9 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, Image, ImageBackground, StyleSheet, ScrollView } from 'react-native';
-import { Logo } from '../assets';
-import { Dimensions } from "react-native";
 import Carousel from 'react-native-snap-carousel';
-import { NavigationContainer } from '@react-navigation/native';
-import { BottomNav } from '../components';
-// import { Fitur } from '../components';
+import { Banner, BottomNav, SaldoKcl } from '../components';
+import { Fitur } from '../components';
 
-// export {
-//     BottomNavigator
-// }
-
-
-// const width = Math.round(Dimensions.get('window').width);
 
 class Home extends Component {
     constructor(props) {
@@ -91,13 +82,7 @@ class Home extends Component {
             <View>
                 <ScrollView>
                     <View style={{ flexDirection: 'column', marginLeft: 15, marginTop: 15, marginRight: 15 }}>
-                        <View style={{ flexDirection: 'row' }}>
-                            <Image source={require('../assets/images/logo.png')}
-                                style={style.logo}
-                                resizeMode="cover"
-                            />
-                            <Text style={style.merchant}>Merchant</Text>
-                        </View>
+                        <Banner />
 
                         <Text style={{ fontWeight: 'bold', fontSize: 20, marginTop: 20 }}>Welcome, User</Text>
                         <Text style={{ fontWeight: 'normal', fontSize: 13, color: '#6E6E6E', marginTop: 5 }}>Resto Ayam - Indonesia</Text>
@@ -107,21 +92,8 @@ class Home extends Component {
                         {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
                         {/* saldo kecil */}
 
+                        <SaldoKcl />
 
-                        <View style={style.kotak1}>
-                            <View style={{ flexDirection: 'row' }}>
-                                <Image source={require('../assets/images/wallet.png')}
-                                    style={style.walletkcl}
-                                    resizeMode="cover"
-                                />
-                                <Text style={{ fontWeight: 'normal', fontSize: 8, marginLeft: '1%', marginTop: '4%', color: '#ffffff', }}>Rp</Text>
-                                <Text style={{ fontWeight: '900', fontSize: 14, marginLeft: '1%', marginTop: '2%', color: '#ffffff', }}>10,000.00</Text>
-                                <Image source={require('../assets/images/RightCevron.png')}
-                                    style={{ width: 8, height: 8, marginTop: '7%', marginLeft: '3%' }}
-                                    resizeMode="cover"
-                                />
-                            </View>
-                        </View>
                         {/* end saldo kecil */}
 
                         {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
@@ -160,96 +132,10 @@ class Home extends Component {
                             </View>
                         </View>
 
-                        {/* <TouchableOpacity
-                    onPress={() => this.props.navigation.navigate('Detail')}>
-                    <Text style={style.txt}>Welcome, </Text>
-                </TouchableOpacity> */}
-
-
-
-
-                        {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
-                        {/* fitur */}
-
-
-                        <View style={{ flexDirection: 'column' }}>
-                            <View style={{ flexDirection: 'row' }}>
-                                <TouchableOpacity>
-                                    <View style={style.kotak3}>
-                                        <View>
-                                            <Image source={require('../assets/images/order.png')}
-                                                style={style.fiturHome}
-                                                resizeMode="cover" />
-                                        </View>
-                                    </View>
-                                    <Text style={style.fiturHomeTxt}>Pesanan</Text>
-                                </TouchableOpacity>
-
-                                <TouchableOpacity>
-                                    <View style={style.kotak3}>
-                                        <View>
-                                            <Image source={require('../assets/images/menu.png')}
-                                                style={style.fiturHome}
-                                                resizeMode="cover" />
-                                        </View>
-                                    </View>
-                                    <Text style={style.fiturHomeTxt}>Menu</Text>
-                                </TouchableOpacity>
-
-                                <TouchableOpacity>
-                                    <View style={style.kotak3}>
-                                        <View>
-                                            <Image source={require('../assets/images/groceries.png')}
-                                                style={style.fiturHome}
-                                                resizeMode="cover" />
-                                        </View>
-                                    </View>
-                                    <Text style={style.fiturHomeTxt}>Grosir</Text>
-                                </TouchableOpacity>
-
-                                <TouchableOpacity>
-                                    <View style={style.kotak3}>
-                                        <View>
-                                            <Image source={require('../assets/images/coupon.png')}
-                                                style={style.fiturHome}
-                                                resizeMode="cover" />
-                                        </View>
-                                    </View>
-                                    <Text style={style.fiturHomeTxt}>Diskon</Text>
-                                </TouchableOpacity>
-
-                            </View>
-
-
-                            <View style={{ flexDirection: 'row' }}>
-                                <TouchableOpacity>
-                                    <View style={style.kotak3}>
-                                        <View>
-                                            <Image source={require('../assets/images/finance.png')}
-                                                style={style.fiturHome}
-                                                resizeMode="cover" />
-                                        </View>
-                                    </View>
-                                    <Text style={style.fiturHomeTxt}>Keuangan</Text>
-                                </TouchableOpacity>
-
-                                <TouchableOpacity>
-                                    <View style={style.kotak3}>
-                                        <View>
-                                            <Image source={require('../assets/images/group.png')}
-                                                style={style.fiturHome}
-                                                resizeMode="cover" />
-                                        </View>
-                                    </View>
-                                    <Text style={style.fiturHomeTxt}>Karyawan</Text>
-                                </TouchableOpacity>
-                            </View>
-                        </View>
-
 
                         {/* fitur */}
-                        {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
-
+                        <Fitur />
+                        {/* fitur */}
 
                         <View>
                             <Text style={{ fontSize: 20, fontWeight: "bold" }}>What's New</Text>
@@ -275,28 +161,17 @@ class Home extends Component {
 // 
 
 const style = StyleSheet.create({
-    kotak: {
-        justifyContent: 'center',
-        position: 'absolute',
-        bottom: 0,
-        height: '10%',
-        width: '90%',
-        borderRadius: 7,
-        backgroundColor: '#5C93FF',
-        marginTop: '5%',
-        marginHorizontal: '4%',
-    },
-    logo: {
-        width: 35,
-        height: 25,
-    },
+    // logo: {
+    //     width: 35,
+    //     height: 25,
+    // },
 
-    walletkcl: {
-        marginLeft: 10,
-        marginTop: 6,
-        width: 15,
-        height: 15,
-    },
+    // walletkcl: {
+    //     marginLeft: 10,
+    //     marginTop: 6,
+    //     width: 15,
+    //     height: 15,
+    // },
 
     wallet: {
         marginLeft: 20,
@@ -304,23 +179,23 @@ const style = StyleSheet.create({
         height: 30,
     },
 
-    merchant: {
-        textAlign: 'right',
-        flex: 1,
-        fontSize: 30,
-        color: '#598FF9',
-        fontWeight: 'bold',
-        marginRight: 'auto',
-        marginLeft: 'auto',
-    },
+    // merchant: {
+    //     textAlign: 'right',
+    //     flex: 1,
+    //     fontSize: 30,
+    //     color: '#598FF9',
+    //     fontWeight: 'bold',
+    //     marginRight: 'auto',
+    //     marginLeft: 'auto',
+    // },
 
-    kotak1: {
-        height: 25,
-        width: 120,
-        borderRadius: 25,
-        backgroundColor: '#5C93FF',
-        marginTop: '5%',
-    },
+    // kotak1: {
+    //     height: 25,
+    //     width: 120,
+    //     borderRadius: 25,
+    //     backgroundColor: '#5C93FF',
+    //     marginTop: '5%',
+    // },
 
     kotak2: {
         height: 'auto',
